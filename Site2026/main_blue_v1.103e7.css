@@ -5,7 +5,7 @@ body{
 }
 
 html{
-	background: url("../../images/v6/blue_body_top.jpg") no-repeat scroll center top, url("../../images/v6/blue_body_repeat3860.jpg?v=1") repeat-y scroll center top #000000;
+	background: url("https://examplesite2026.vercel.app/Site2026/blue_body_top.jpg") no-repeat scroll center top, url("https://examplesite2026.vercel.app/Site2026/blue_body_repeat3860.jpg?v=1") repeat-y scroll center top #000000;
 	font-size: 14px;
 }
 
@@ -36,7 +36,7 @@ h4{
 	margin-top: 20px;
 	padding: 0 0 4px 0;
 	font-family: "Motiva Sans", Arial,sans-serif;
-	background: url(../../images/v6/maincol_gradient_rule.png) no-repeat bottom left rgba(0, 0, 0, 0);
+	background: url(https://examplesite2026.vercel.app/Site2026/maincol_gradient_rule.png) no-repeat bottom left rgba(0, 0, 0, 0);
 	font-size: 18px;
 }
 
@@ -171,7 +171,7 @@ div .warning h3:first-child {
 }
 
 .navigation li {
-	background: url("../../images/custom/bullets/blue.gif") no-repeat scroll 0 center rgba(0, 0, 0, 0);
+	background: url("https://examplesite2026.vercel.app/Site2026/blue.gif") no-repeat scroll 0 center rgba(0, 0, 0, 0);
 	color: #b0aeac;
 	display: block;
 	float: left;
@@ -293,14 +293,14 @@ div .warning h3:first-child {
 #sidebar_community_help{
 	padding: 20px 20px 20px 85px;
 	margin-top: 10px;
-	background: url(../../images/v6/icons/icon_community.png) 20px 20px no-repeat rgba(0, 0, 0, 0.2);
+	background: url(https://examplesite2026.vercel.app/Site2026/icon_community.png) 20px 20px no-repeat rgba(0, 0, 0, 0.2);
 	line-height: 21px;
 }
 
 #sidebar_documentation{
 	padding: 20px 20px 20px 85px;
 	margin-top: 10px;
-	background: url(../../images/v6/icons/icon_documents.png) 20px 30px no-repeat rgba(0, 0, 0, 0.2);
+	background: url(https://examplesite2026.vercel.app/Site2026/icon_documents.png) 20px 30px no-repeat rgba(0, 0, 0, 0.2);
 	height: 100px;
 	position: relative;
 }
@@ -314,7 +314,7 @@ div .warning h3:first-child {
 }
 
 #contact_support_button {
-	background: url("../../images/v6/contact_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: url("https://examplesite2026.vercel.app/Site2026/contact_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	display: table;
 	height: 49px;
 	left: 38px;
@@ -326,11 +326,11 @@ div .warning h3:first-child {
 
 #contact_support_button:hover {
 	opacity: .8;
-	background: url("../../images/v6/contact_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: url("https://examplesite2026.vercel.app/Site2026/contact_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 #contact_tpg_link {
-	background: url("../../images/v6/contact_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: url("https://examplesite2026.vercel.app/Site2026/contact_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 	height: 49px;
 	position: relative;
 	width: 233px;
@@ -339,7 +339,7 @@ div .warning h3:first-child {
 
 #contact_tpg_link:hover {
 	opacity: .8;
-	background: url("../../images/v6/contact_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: url("https://examplesite2026.vercel.app/Site2026/contact_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 #contact_tpg_link span {
@@ -363,7 +363,7 @@ div .warning h3:first-child {
 #backtotop span {
 	background: none repeat scroll 0 0 #29455b;
 	display: inline-block;
-	float: left;
+	float: none;
 	font-size: 14px;
 	font-weight: bold;
 	margin-top: 16px;
@@ -465,7 +465,7 @@ select, textarea, .text, .input {
 
 
 #search_button_main{
-	background: url(../../images/v6/icons/search_icon.png);
+	background: url(https://examplesite2026.vercel.app/Site2026/search_icon.png);
 	position: absolute;
 	top: 26px;
 	left: 400px;
@@ -492,7 +492,7 @@ select, textarea, .text, .input {
 }
 
 .btn_darkblue_white_innerfade {
-	background: url("../../images/v6/contact_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: url("https://examplesite2026.vercel.app/Site2026/contact_button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 .btn_border_2px {
@@ -560,26 +560,6 @@ select, textarea, .text, .input {
 	color: #ffffff;
 }
 
-#account_issues .issue_header{
-	background: url(../../images/v6/icons/icon_account.png) 18px 11px no-repeat rgba(0, 0, 0, 0.3);
-}
-
-#purchase_issues .issue_header{
-	background: url(../../images/v6/icons/icon_purchase.png) 18px 11px no-repeat rgba(0, 0, 0, 0.3);
-}
-
-#technical_issues .issue_header{
-	background: url(../../images/v6/icons/icon_technical.png) 18px 11px no-repeat rgba(0, 0, 0, 0.3);
-}
-
-#item_issues .issue_header{
-	background: url(../../images/v6/icons/icon_item.png) 18px 11px no-repeat rgba(0, 0, 0, 0.3);
-}
-
-#game_issues .issue_header{
-	background: url(../../images/v6/icons/icon_game.png) 18px 11px no-repeat rgba(0, 0, 0, 0.3);
-}
-
 #main_home{
 	padding: 15px;
 }
@@ -597,13 +577,13 @@ select, textarea, .text, .input {
 }
 
 #community_help_home{
-	background: url(../../images/v6/icons/icon_community.png) no-repeat 15px center #223649;
+	background: url(https://examplesite2026.vercel.app/Site2026/icon_community.png) no-repeat 15px center #223649;
 	margin-bottom: 15px;
 	padding: 20px 20px 20px 80px;
 }
 
 #documentation_home{
-	background: url(../../images/v6/icons/icon_documents.png) no-repeat 15px center #223649;
+	background: url(https://examplesite2026.vercel.app/Site2026/icon_documents.png) no-repeat 15px center #223649;
 	margin-bottom: 15px;
 	padding: 20px 20px 20px 80px;
 }
@@ -665,7 +645,7 @@ select, textarea, .text, .input {
 }
 
 .main_kb_cat h2:first-of-type{
-	background-image: url("../../../steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png");
+	background-image: url("https://examplesite2026.vercel.app/Site2026/maincol_gradient_rule.png");
 	background-position: 25px bottom;
 	background-repeat: no-repeat;
 	height: 26px;
@@ -839,7 +819,7 @@ select, textarea, .text, .input {
 /* Footer */
 
 #footer {
-	background: url("../../images/v6/valve_footer_logo.png") no-repeat scroll 0 15px;
+	background: url("https://examplesite2026.vercel.app/Site2026/valve_footer_logo.png") no-repeat scroll 0 15px;
 	border-top: 1px solid #333333;
 	bottom: 0;
 	clear: both;
