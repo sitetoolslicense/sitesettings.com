@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trolled 😈</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+  font-family: Arial;
+}
+
+/* BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://examplesite2026.vercel.app/Trollface.png") repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* TEXT */
+.text {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  color: red;
+  font-size: 35px;
+  text-shadow: 0 0 10px red;
+}
+
+/* CENTER IMAGE */
+.troll {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.troll img {
+  width: 250px;
+  animation: spin 6s linear infinite;
+}
+
+/* FLOATING */
+.mini {
+  position: absolute;
+  width: 80px;
+  animation: float 4s infinite alternate;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  from { transform: translateY(0px); }
+  to { transform: translateY(40px); }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="text">YOU GOT TROLLED 😈</div>
+
+<div class="troll">
+  <img src="https://examplesite2026.vercel.app/Trollface.png">
+</div>
+
+<!-- floating trolls -->
+<img src="https://examplesite2026.vercel.app/Trollface.png" class="mini" style="top:20%; left:10%;">
+<img src="https://examplesite2026.vercel.app/Trollface.png" class="mini" style="top:70%; left:80%;">
+<img src="https://examplesite2026.vercel.app/Trollface.png" class="mini" style="top:50%; left:30%;">
+
+</body>
+</html>
