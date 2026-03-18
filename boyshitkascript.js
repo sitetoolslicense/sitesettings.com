@@ -1,6 +1,6 @@
 // 🔐 PROTECT THIS PAGE
 if (localStorage.getItem("loggedIn") !== "true") {
-  window.location.href = "http://127.0.0.1:5501/Example.html"; // change this
+  window.location.href = "https://examplesite2026.vercel.app/Examplesitehome.html"; // change this
 }
 let attempt = 0;
 
