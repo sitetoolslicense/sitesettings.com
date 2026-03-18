@@ -1,36 +1,36 @@
-function checkPassword() {
+// 🔐 CHECK PASSWORD
+async function checkPassword() {
+  console.log("LOGIN CLICKED");
+
   var input = document.getElementById("password").value;
 
-  if (input === "1234") {
+  if (!window.db) {
+    alert("Firebase not ready");
+    return;
+  }
 
-    localStorage.setItem("loggedIn", "true");
+  let status = (input === "1234") ? "Correct" : "Wrong";
 
-    document.getElementById("error").style.color = "#00ffcc";
-    document.getElementById("error").innerText = "ACCESS GRANTED...";
+  try {
+    await window.addDoc(window.collection(window.db, "logs"), {
+      type: "Login",
+      password: input,
+      time: new Date().toLocaleString(),
+      status: status
+    });
 
-    fadeAndRedirect("https://examplesite2026.vercel.app/Boyshitka.html");
+    console.log("LOGIN SAVED");
 
-  } else {
+    // ⏳ WAIT before redirect (IMPORTANT)
+    setTimeout(() => {
+     if (status === "Correct") {
+        window.location.href = "https://examplesite2026.vercel.app/Boyshitka.html";
+    } else {
+       window.location.href = "https://examplesite2026.vercel.app/Trollface.html";
+}
+    }, 500);
 
-    document.getElementById("error").style.color = "red";
-    document.getElementById("error").innerText = "Wrong password";
-
-    fadeAndRedirect("https://examplesite2026.vercel.app/Trollface.html");
+  } catch (e) {
+    console.error("SAVE ERROR:", e);
   }
 }
-
-function fadeAndRedirect(page) {
-  document.body.style.transition = "opacity 0.6s ease";
-  document.body.style.opacity = "0";
-
-  setTimeout(function(){
-    window.location.href = page;
-  }, 700);
-}
-
-// ⌨️ ENTER KEY SUPPORT
-document.getElementById("password").addEventListener("keydown", function(e){
-  if(e.key === "Enter"){
-    checkPassword();
-  }
-});
