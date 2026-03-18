@@ -23,11 +23,12 @@ async function checkPassword() {
 
     // ⏳ WAIT before redirect (IMPORTANT)
     setTimeout(() => {
-     if (status === "Correct") {
-        window.location.href = "https://examplesite2026.vercel.app/Boyshitka.html";
-    } else {
-       window.location.href = "https://examplesite2026.vercel.app/Trollface.html";
-}
+ if (status === "Correct") {
+    localStorage.setItem("loggedIn", "true"); // ✅ ADD THIS LINE HERE
+    window.location.href = "https://examplesite2026.vercel.app/Boyshitka.html";
+ } else {
+    window.location.href = "https://examplesite2026.vercel.app/Trollface.html";
+ }
     }, 500);
 
   } catch (e) {
