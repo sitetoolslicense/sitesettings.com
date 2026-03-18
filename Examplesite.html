@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secure Access</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      color: #00ffcc;
+      font-family: "Courier New", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      border: 1px solid #00ffcc;
+      padding: 30px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 15px #00ffcc;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-shadow: 0 0 5px #00ffcc;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      background: black;
+      border: 1px solid #00ffcc;
+      color: #00ffcc;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 15px;
+      background: black;
+      border: 1px solid #00ffcc;
+      color: #00ffcc;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #00ffcc;
+      color: black;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    .locked {
+      color: red;
+      font-weight: bold;
+    }
+
+    .toggle {
+      cursor: pointer;
+      font-size: 12px;
+      margin-top: 5px;
+      display: inline-block;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="box">
+  <h2>ACCESS TERMINAL</h2>
+
+  <input type="password" id="password" placeholder="Enter password">
+  <br>
+
+  <span class="toggle" onclick="togglePassword()">👁 Show / Hide</span>
+  <br>
+
+  <button onclick="checkPassword()">ENTER</button>
+
+  <div class="error" id="error"></div>
+  <div class="locked" id="locked"></div>
+</div>
+
+<script>
+  var correctPassword = "1234";
+  var attempts = 0;
+  var maxAttempts = 3;
+
+  function checkPassword() {
+    var input = document.getElementById("password").value;
+
+    if (attempts >= maxAttempts) {
+      document.getElementById("locked").innerText = "SYSTEM LOCKED 🔒";
+      return;
+    }
+
+    if (input === correctPassword) {
+      window.location.href = "https://examplesite2026.vercel.app/Boyshitka.html"; // change this
+    } else {
+      attempts++;
+      document.getElementById("error").innerText =
+        "ACCESS DENIED (" + attempts + "/" + maxAttempts + ")";
+
+      if (attempts >= maxAttempts) {
+        document.getElementById("locked").innerText = "SYSTEM LOCKED 🔒";
+      }
+    }
+  }
+
+  function togglePassword() {
+    var field = document.getElementById("password");
+    if (field.type === "password") {
+      field.type = "text";
+    } else {
+      field.type = "password";
+    }
+  }
+</script>
+
+</body>
+</html>
