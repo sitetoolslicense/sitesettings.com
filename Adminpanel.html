@@ -146,7 +146,9 @@
             <td>${data.country || ""}</td>
             <td>${data.time ? new Date(data.time.seconds * 1000).toLocaleString() : ""}</td>
             <td>
-              <button onclick="kickUser('${data.email}')">Kick</button>
+              <button style="background:orange;color:white;border:none;padding:5px 10px;border-radius:5px;cursor:pointer;" onclick="kickUser('${data.email}')">
+  Kick
+</button>
             </td>
         </tr>
      `;
@@ -187,7 +189,15 @@
      loadLogs();
   };
 
- window.kickUser = async function(email) {
+window.kickUser = async function(email) {
+
+  const currentUser = auth.currentUser.email.toLowerCase().trim();
+
+  // 🚫 Prevent self-kick
+  if (email.toLowerCase() === currentUser) {
+    alert("You cannot kick yourself!");
+    return;
+  }
 
   // 🚪 Block user
   await setDoc(doc(db, "blockedUsers", email), {
@@ -207,8 +217,9 @@
   }
 
   alert(email + " kicked and logs removed!");
-  loadLogs(); // refresh table
+  loadLogs();
 };
+    
   </script>
 
 </body>
