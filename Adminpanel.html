@@ -187,15 +187,28 @@
      loadLogs();
   };
 
-   // 🚪 Kick user
-     window.kickUser = async function(email) {
-      await setDoc(doc(db, "blockedUsers", email), {
-       email: email,
-       blocked: true
-     });
+ window.kickUser = async function(email) {
 
-     alert(email + " has been kicked!");
-   };
+  // 🚪 Block user
+  await setDoc(doc(db, "blockedUsers", email), {
+    email: email,
+    blocked: true
+  });
+
+  // 🗑 Delete their logs
+  const snapshot = await getDocs(collection(db, "logins"));
+
+  for (const d of snapshot.docs) {
+    const data = d.data();
+
+    if (data.email === email) {
+      await deleteDoc(doc(db, "logins", d.id));
+    }
+  }
+
+  alert(email + " kicked and logs removed!");
+  loadLogs(); // refresh table
+};
   </script>
 
 </body>
