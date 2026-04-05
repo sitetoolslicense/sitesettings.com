@@ -188,7 +188,8 @@
      alert("All logs deleted!");
      loadLogs();
   };
-
+    
+if (!confirm("Kick this user?")) return;
 window.kickUser = async function(email) {
 
   const currentUser = auth.currentUser.email.toLowerCase().trim();
